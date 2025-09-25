@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#252525] h-screen px-5 overflow-hidden">
+    <!-- Nav Bar -->
+    <header class="bg-[#252525]">
+      <div class="flex justify-between items-center w-[92%] mx-auto py-5">
+        <div>
+          <img class="w-100" src="images/logov3.png" alt="..." />
+        </div>
+        <div class="">
+          <ul class="flex items-center gap-[4vw]">
+            <li>
+              <a class="text-[#e99797] hover:text-gray-500" href="#">Home</a>
+            </li>
+            <li>
+              <a class="text-[#e99797] hover:text-gray-500" href="#"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="text-[#e99797] hover:text-gray-500" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+          >
+            Download
+          </button>
+        </div>
+      </div>
+    </header>
+    <section id="home" class="flex items-center justify-center min-h-screen pb-40">
+      <div class="container mx-auto px-5">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-10"
+        >
+          <!-- content -->
+          <div class="w-full md:w-1/2 space-y-5 text-center md:text-left">
+            <h1 class="font-bold text-3xl md:text-4xl">
+              <span class="text-yellow-500">
+                Transform your wellness journey with data-driven insights.
+              </span>
+            </h1>
+            <p class="text-white">
+              Your new nutrition powerhouse. Featuring instant food scanning, a
+              smart nutrition chatbot, and predictive forecasting to keep you on
+              track. It's everything you need to master your macros, crush your
+              targets, and unlock future gains.
+            </p>
+            <button
+              class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+            >
+              <span>Download Now!</span>
+            </button>
+          </div>
+
+          <!-- image -->
+          <div class="w-full md:w-1/2 flex justify-center">
+            <img
+              src="images/Tracktasty-logo.png"
+              alt="logo-image"
+              class="max-w-xs md:max-w-md h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

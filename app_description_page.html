@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackTasty-Features</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .phone-mockup {
+        position: relative;
+        width: 300px;
+        height: 600px;
+        background: #f8f8f8;
+        border-radius: 40px;
+        padding: 15px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+      }
+
+      .phone-screen {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .phone-notch {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 160px;
+        height: 25px;
+        background: #1a1a1a;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        z-index: 10;
+      }
+
+      .slider {
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+      }
+
+      .slide {
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slide-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .slide-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .slide-placeholder {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body class="bg-[#252525] h-screen px-5 overflow-hidden">
+    <!-- Nav Bar -->
+    <header class="bg-[#252525]">
+      <div class="flex justify-between items-center w-[92%] mx-auto py-5">
+        <div>
+          <img
+            onclick="window.location.href='index.html'"
+            class="w-48"
+            src="images/logov3.png"
+            alt="Tracktasty-logo"
+          />
+        </div>
+        <div>
+          <button
+            class="bg-[#E99797] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+            onclick="window.open('https://github.com/emjeypugeee/TrackTasty-Website/releases/latest/download/TrackTasty-v1.0.apk')"
+          >
+            Download
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="pt-5 flex items-center justify-center min-h-screen pb-40">
+      <div class="container mx-auto px-5">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-10"
+        >
+          <!-- Text Content -->
+          <div class="w-full lg:w-1/2 space-y-8">
+            <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl">
+              <span class="text-[#E99797]">
+                Transform your wellness journey with data-driven insights.
+              </span>
+            </h1>
+
+            <div class="space-y-6">
+              <div class="bg-[#333333] p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-[#E99797] mb-2">
+                  Smart Food Scanning
+                </h3>
+                <p class="text-gray-300">
+                  Instantly scan any food item and get detailed nutritional
+                  information. Our AI-powered technology recognizes thousands of
+                  foods and provides accurate macro breakdowns.
+                </p>
+              </div>
+
+              <div class="bg-[#333333] p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-[#E99797] mb-2">
+                  Nutrition Assistant
+                </h3>
+                <p class="text-gray-300">
+                  Get personalized nutrition advice from our smart chatbot. Ask
+                  questions about your diet, get meal suggestions, and
+                  understand how different foods affect your goals.
+                </p>
+              </div>
+
+              <div class="bg-[#333333] p-6 rounded-xl">
+                <h3 class="text-xl font-semibold text-[#E99797] mb-2">
+                  Predictive Analytics
+                </h3>
+                <p class="text-gray-300">
+                  Tracktasty forecasts your nutritional trajectory based on your
+                  habits. Stay ahead of your goals with insights that help you
+                  make better decisions.
+                </p>
+              </div>
+            </div>
+
+            <button
+              onclick="window.open('https://github.com/emjeypugeee/TrackTasty-Website/releases/latest/download/TrackTasty-v1.0.apk')"
+              class="bg-[#E99797] text-white px-6 py-3 rounded-full hover:bg-[#87acec] transition-colors mt-4"
+            >
+              <span> 📲 Download APK (v1.0)</span>
+            </button>
+          </div>
+
+          <!-- Phone Mockup with Slider -->
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <div class="phone-mockup bg-gray-500">
+              <div class="phone-screen">
+                <div
+                  id="slider"
+                  class="slider flex transition-transform duration-500 ease-in-out"
+                >
+                  <!-- Slide 1 - Home Page -->
+                  <div class="slide">
+                    <div class="slide-content">
+                      <img
+                        src="images/dashboard.jpg"
+                        alt="dashboard"
+                        class="rounded-lg"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 - Food Scanner -->
+                  <div class="slide">
+                    <div class="slide-content">
+                      <img
+                        src="images/scanner.jpg"
+                        alt="scanner"
+                        class="rounded-lg"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 - Food Scanner Result -->
+                  <div class="slide">
+                    <div class="slide-content">
+                      <img
+                        src="images/scanned.jpg"
+                        alt="scanned"
+                        class="rounded-lg"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Slide 4 - AI Chatbot -->
+                  <div class="slide">
+                    <div class="slide-content">
+                      <img
+                        src="images/chatbot.jpg"
+                        alt="chatbot"
+                        class="rounded-lg"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Slide 5 - Meal Planning -->
+                  <div class="slide">
+                    <div class="slide-content">
+                      <img
+                        src="images/forecasting.jpg"
+                        alt="forecasting"
+                        class="rounded-lg"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Slide 6 - Meal Planning -->
+                  <div class="slide">
+                    <div class="slide-content">
+                      <img
+                        src="images/foods.jpg"
+                        alt="foods"
+                        class="rounded-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide Descriptions -->
+              <div class="mt-6 text-center max-w-md">
+                <p id="slideDescription" class="text-gray-300">
+                  Point your camera at any food item and get instant nutritional
+                  data with our AI-powered scanner.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="flex flex-col items-center mt-10">
+          <div class="flex space-x-4 mb-6">
+            <button
+              id="prevBtn"
+              class="bg-[#333333] text-white p-3 rounded-full hover:bg-[#444444] transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              id="nextBtn"
+              class="bg-[#333333] text-white p-3 rounded-full hover:bg-[#444444] transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Slide Indicators -->
+          <div class="flex space-x-2">
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-500 focus:outline-none slider-dot-active"
+            ></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-500 focus:outline-none"
+            ></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-500 focus:outline-none"
+            ></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-500 focus:outline-none"
+            ></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-500 focus:outline-none"
+            ></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-500 focus:outline-none"
+            ></button>
+            <button
+              class="slider-dot w-3 h-3 rounded-full bg-gray-500 focus:outline-none"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Image Slider Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("slider");
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".slider-dot");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const slideDescription = document.getElementById("slideDescription");
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Slide descriptions
+        const descriptions = [
+          "Watch your progress come alive! Track macros, crush goals, and celebrate wins with our vibrant dashboard.",
+          "Scan any food instantly! Our AI recognizes thousands of foods and reveals their nutritional secrets in seconds.",
+          "Your meal, identified! AI instantly analyzes your food photos and shows you exactly what you're eating.",
+          "Your personal nutrition coach! Get instant answers and smart recommendations from our AI assistant.",
+          "See your future fitness! Our forecasting predicts your progress and keeps you motivated to stay on track.",
+          "Unlock food knowledge! Explore our massive database and discover the nutritional power of everything you eat.",
+        ];
+
+        // Function to update slider position
+        function updateSlider() {
+          slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+          // Update active dot
+          dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.add("bg-[#E99797]");
+              dot.classList.remove("bg-gray-500");
+            } else {
+              dot.classList.remove("bg-[#E99797]");
+              dot.classList.add("bg-gray-500");
+            }
+          });
+
+          // Update description
+          slideDescription.textContent = descriptions[currentSlide];
+        }
+
+        // Next slide
+        nextBtn.addEventListener("click", function () {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        });
+
+        // Previous slide
+        prevBtn.addEventListener("click", function () {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateSlider();
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", function () {
+            currentSlide = index;
+            updateSlider();
+          });
+        });
+
+        // Auto slide every 5 seconds
+        setInterval(function () {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>

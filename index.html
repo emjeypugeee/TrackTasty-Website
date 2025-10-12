@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TrackTasty</title>
+    <link rel="icon" type="image/x-icon" href="/images/Tracktasty-logo.png" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body class="bg-[#252525] h-screen px-5 lg:overflow-hidden">
+  <body class="bg-[#252525]">
     <!-- Nav Bar -->
     <header class="bg-[#252525]">
       <div class="flex justify-between items-center w-[92%] mx-auto py-5">
         <div>
           <img
             onclick="window.location.href='index.html'"
-            class="w-100"
+            class="w-100 cursor-pointer"
             src="images/logov3.png"
             alt="Tracktasty-logo"
           />
         </div>
         <div>
           <button
-            class="bg-[#E99797] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+            class="bg-[#E99797] text-white px-5 py-2 rounded-full hover:bg-[#87acec] transition-colors duration-300"
             onclick="window.open('https://github.com/emjeypugeee/TrackTasty-Website/releases/latest/download/TrackTasty-v1.0.apk')"
           >
             Download
@@ -51,7 +56,7 @@
             </p>
             <button
               onclick="window.location.href='app_description_page.html'"
-              class="bg-[#E99797] text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+              class="bg-[#E99797] text-white px-5 py-2 rounded-full hover:bg-[#87acec] transition-colors duration-300"
             >
               <span>Want to know more?</span>
             </button>
@@ -68,5 +73,360 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] text-white py-4">
+      <div class="container mx-auto">
+        <div class="flex flex-col items-center text-center">
+          <!-- Links -->
+          <div class="flex justify-center space-x-8">
+            <!-- Terms of Use -->
+            <div class="space-y-4 flex flex-col items-center">
+              <button
+                onclick="openModal('termsModal')"
+                class="text-sm font-semibold text-[#E99797] hover:text-[#87acec] transition-colors duration-300"
+              >
+                Terms of Use
+              </button>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div class="flex flex-col items-center">
+              <button
+                onclick="openModal('FAQsModal')"
+                class="text-sm font-semibold text-[#E99797] hover:text-[#87acec] transition-colors duration-300"
+              >
+                FAQs
+              </button>
+            </div>
+          </div>
+
+          <!-- Copyright -->
+          <div
+            class="border-t border-gray-800 mt-1 pt-1 text-center text-gray-500 text-sm w-full max-w-4xl"
+          >
+            <p>&copy; 2025 TrackTasty. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Terms of Use Modal -->
+    <div
+      id="termsModal"
+      class="hidden fixed inset-0 bg-transparent backdrop-blur-lg flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#2c2c2c] text-white rounded-xl p-6 max-w-3xl w-[90%] max-h-[80vh] overflow-y-auto relative"
+      >
+        <!-- Close Button (top-right) -->
+        <button
+          onclick="closeModal('termsModal')"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-2xl font-semibold mb-4 text-[#E99797]">Terms of Use</h2>
+
+        <!-- Scrollable Text -->
+        <div
+          class="text-sm text-gray-300 space-y-4 overflow-y-auto pr-2"
+          style="max-height: 60vh"
+        >
+          <p>
+            <strong>1. ACCEPTANCE OF TERMS</strong><br />
+            By accessing or using TrackTasty ("the App"), you agree to be bound
+            by these Terms and Conditions. If you do not agree to all terms,
+            please discontinue use immediately. Continued use constitutes
+            acceptance of any modifications.
+          </p>
+
+          <p>
+            <strong>2. SERVICE DESCRIPTION</strong><br />
+            TrackTasty is a macro-nutrient tracking application designed to help
+            beginners monitor food intake, calculate nutritional requirements,
+            and support weight management goals. The App provides personalized
+            macro calculations based on user-provided information including age,
+            gender assigned at birth, weight, height, activity level, weight
+            goals, dietary preferences, and allergies.
+          </p>
+
+          <p>
+            <strong>3. USER GUIDELINES</strong><br />
+            • You must provide accurate and complete information for macro
+            calculations <br />
+            • You agree to use the App only for lawful purposes <br />
+            • You must be at least 14 years old to use the App <br />
+            • You acknowledge that results may vary based on individual
+            adherence
+          </p>
+
+          <p>
+            <strong>4. MEDICAL DISCLAIMER</strong><br />
+            TrackTasty provides nutritional information and tracking tools for
+            informational purposes only. The App is not intended to diagnose,
+            treat, cure, or prevent any disease or health condition. Always
+            consult with a qualified healthcare professional before making
+            significant changes to your diet or exercise routine. The macro
+            calculations are estimates and should be used as guidelines rather
+            than strict prescriptions.
+          </p>
+
+          <p>
+            <strong>5. DATA COLLECTION AND PRIVACY</strong><br />
+            We collect personal information (such as your preferences and app
+            usage) to provide and improve our services. Your data is stored
+            securely and handled according to our Privacy Policy. By using
+            TrackTasty, you agree to the collection and processing of your data
+            as described in our Privacy Policy. We comply with the Data Privacy
+            Act of 2012 (Republic Act No. 10173) and ensure that your personal
+            information is collected, used, and protected in accordance with
+            Philippine data privacy laws.
+          </p>
+
+          <p>
+            <strong>6. INTELLECTUAL PROPERTY</strong><br />
+            All content, features, and functionality developed by us for the
+            TrackTasty application are owned by us and are protected by
+            international copyright, trademark, and other intellectual property
+            laws. You may not copy, modify, distribute, or create derivative
+            works of our proprietary content without our explicit permission.
+            However, the application utilizes data and services provided by
+            third-party APIs, including but not limited to Gemini API (Google),
+            FatSecret Platform (FatSecret), and DeepSeek API (DeepSeek). The use
+            of any content, data, or functionality provided by these third-party
+            APIs is governed by their respective terms of service and
+            intellectual property policies. You acknowledge and agree that we
+            are not the owners of this third-party content and are not
+            responsible for your use of it.
+          </p>
+
+          <p>
+            <strong>7. LIMITATION OF LIABILITY</strong><br />
+            TrackTasty and its developers shall not be liable for any indirect,
+            incidental, special, consequential, or punitive damages resulting
+            from your use or inability to use the App. This includes but is not
+            limited to errors in macro calculations, nutritional information, or
+            any health-related outcomes.
+          </p>
+
+          <p>
+            <strong>8. MODIFICATIONS TO TERMS</strong><br />
+            We reserve the right to modify these Terms and Conditions at any
+            time. Continued use of the App after changes constitutes acceptance
+            of the modified terms. Users will be notified of significant changes
+            through the App or via email.
+          </p>
+
+          <p>
+            <strong>9. TERMINATION</strong><br />
+            We may terminate or suspend your access to TrackTasty immediately,
+            without prior notice, for conduct that we believe violates these
+            Terms or is harmful to other users or the App's operation.
+          </p>
+
+          <p>
+            <em
+              >By using TrackTasty, you acknowledge that you have read,
+              understood, and agree to be bound by these Terms and
+              Conditions.</em
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQs Modal -->
+    <div
+      id="FAQsModal"
+      class="hidden fixed inset-0 bg-transparent backdrop-blur-lg flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#2c2c2c] text-white rounded-xl p-6 max-w-3xl w-[90%] max-h-[80vh] overflow-y-auto relative"
+      >
+        <!-- Close Button (top-right) -->
+        <button
+          onclick="closeModal('FAQsModal')"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-2xl font-semibold mb-4 text-[#E99797]">FAQs</h2>
+
+        <div
+          class="text-sm text-gray-300 space-y-6 overflow-y-auto pr-2"
+          style="max-height: 60vh"
+        >
+          <!-- Getting Started & Account -->
+          <div>
+            <h3 class="text-lg font-semibold text-[#E99797] mb-2">
+              Getting Started & Account
+            </h3>
+            <p>
+              <strong>Q:</strong> How do I create a TrackTasty account?<br />
+              <strong>A:</strong> On the startup page, select “Sign Up” or
+              “Register.” You will be guided through creating a new account that
+              you can use to log in.
+            </p>
+
+            <p>
+              <strong>Q:</strong> I forgot my password. What should I do?<br />
+              <strong>A:</strong> On the login page, use the “Forget Password”
+              option. You will be able to reset your password after verifying
+              your identity through your registered email.
+            </p>
+
+            <p>
+              <strong>Q:</strong> Why do I need to provide my personal
+              information during sign-up?<br />
+              <strong>A:</strong> This information is essential for our system
+              to accurately calculate your personalized daily calorie needs and
+              macronutrient goals (carbs, fats, and protein). This ensures your
+              meal plans and tracking are tailored specifically to you.
+            </p>
+
+            <p>
+              <strong>Q:</strong> What are dietary preferences and allergies
+              used for?<br />
+              <strong>A:</strong> Your dietary preferences (e.g., vegetarian,
+              keto) help our chatbot prioritise foods you enjoy when generating
+              meal plans. Your allergies are used to avoid suggesting foods that
+              may be harmful to you.
+            </p>
+          </div>
+          <!-- Understanding Macro Tracking -->
+          <div>
+            <h3 class="text-lg font-semibold text-[#E99797] mb-2">
+              Understanding Macro Tracking
+            </h3>
+            <p>
+              <strong>Q:</strong> What are macros and why should I track
+              them?<br />
+              <strong>A:</strong> Macros (short for macronutrients) are
+              carbohydrates, proteins, and fats. Tracking them helps you
+              maintain the right balance to achieve your fitness goals.
+            </p>
+
+            <p>
+              <strong>Q:</strong> How does macro tracking differ from calorie
+              counting?<br />
+              <strong>A:</strong> Calorie counting focuses on total intake,
+              while macro tracking ensures the right ratio of proteins, carbs,
+              and fats for optimal health and performance.
+            </p>
+
+            <p>
+              <strong>Q:</strong> What if I go over my macros for one day?<br />
+              <strong>A:</strong> Don’t worry! One day won’t ruin your progress.
+              Consistency matters more than daily perfection.
+            </p>
+
+            <p>
+              <strong>Q:</strong> How long does it take to see results from
+              macro tracking?<br />
+              <strong>A:</strong> Most people notice energy changes within 1–2
+              weeks and visible progress after 4–6 weeks of consistent tracking.
+            </p>
+
+            <p>
+              <strong>Q:</strong> What’s the best way to measure food for
+              accuracy?<br />
+              <strong>A:</strong> Use a food scale for solids, measuring cups
+              for liquids, and log everything in the app immediately after
+              measuring.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold text-[#E99797] mb-2">
+              Managing My Preferences
+            </h3>
+            <p>
+              <strong>Q:</strong> Can I change my dietary preferences or
+              allergies?<br />
+              <strong>A:</strong> Yes. You can update them anytime in “Edit Food
+              Preference” in the side drawer.
+            </p>
+
+            <p>
+              <strong>Q:</strong> What if my fitness goals change?<br />
+              <strong>A:</strong> You can recalculate your macros anytime by
+              selecting “Edit Goals.”
+            </p>
+
+            <p>
+              <strong>Q:</strong> Can I set reminders to log my meals?<br />
+              <strong>A:</strong> Yes, go to “Notification Settings” to set or
+              disable meal reminders.
+            </p>
+          </div>
+          <!-- Using the App & Features -->
+          <div>
+            <h3 class="text-lg font-semibold text-[#E99797] mb-2">
+              Using the App & Features
+            </h3>
+            <p>
+              <strong>Q:</strong> What is shown on the Home Page?<br />
+              <strong>A:</strong> The Home Page displays your daily progress
+              toward your macro goals and lets you review the past seven days of
+              data.
+            </p>
+
+            <p>
+              <strong>Q:</strong> What can I ask the Chatbot?<br />
+              <strong>A:</strong> You can ask for food info, recipes, meal
+              plans, or nutrition values, and even log meals directly through
+              the chatbot.
+            </p>
+
+            <p>
+              <strong>Q:</strong> What information is on the Analytics Page?<br />
+              <strong>A:</strong> It shows your calorie trends, weight history,
+              and a forecast of your future weight based on habits.
+            </p>
+
+            <p>
+              <strong>Q:</strong> How do I log food I’ve eaten?<br />
+              <strong>A:</strong> You can log food by:
+            </p>
+
+            <ul class="list-disc pl-5">
+              <li>Manual Input</li>
+              <li>Search Database</li>
+              <li>Camera Scan</li>
+              <li>Chatbot Recommendation</li>
+            </ul>
+          </div>
+          <!-- Support -->
+          <div>
+            <h3 class="text-lg font-semibold text-[#E99797] mb-2">Support</h3>
+            <p>
+              <strong>Q:</strong> How can I report a bug or suggest a
+              feature?<br />
+              <strong>A:</strong> Use the “Send Feedback” page in the side
+              drawer to share your ideas or issues.
+            </p>
+
+            <p>
+              <strong>Q:</strong> How do I report a chatbot issue?<br />
+              <strong>A:</strong> Go to the Chatbot Page, click the settings
+              icon, and select “Report Chatbot Issue.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+      }
+    </script>
   </body>
 </html>
